@@ -1,7 +1,7 @@
 export const en = {
   hero: {
     badge: "Currently taking 2 new projects this month",
-    title: "Full-stack engineering for US small businesses — without the agency price taggg.",
+    title: "Full-stack engineering for US small businesses — without the agency price tag.",
     subtitle:
       "We're the team behind Meniva, a live multi-tenant SaaS platform. Now we build automation, dashboards, and MVPs for businesses like yours — delivered in weeks, not months.",
     ctaPrimary: "Get a Free Quote",
