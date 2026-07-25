@@ -49,7 +49,7 @@ export default function Services({ onSelectService }: ServicesProps) {
               {/* Pricing */}
               <div className="mb-6 border-y border-zinc-800 py-6">
                 <p className="text-xs text-zinc-500 line-through">
-                  Reg: {service.regularPrice}
+                  {t.services.regularPrefix} {service.regularPrice}
                 </p>
                 <p className="mt-1 text-3xl font-extrabold text-emerald-400">
                   {service.foundingPrice}
@@ -58,7 +58,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                   * {t.services.foundingNotice}
                 </p>
                 <p className="mt-1 text-xs text-zinc-400 font-mono">
-                  Delivery: {service.deliveryTime}
+                  {t.services.deliveryPrefix} {service.deliveryTime}
                 </p>
               </div>
 

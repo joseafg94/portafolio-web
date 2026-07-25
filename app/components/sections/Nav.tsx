@@ -83,7 +83,7 @@ export default function Nav() {
 
       {/* Mobile Nav Menu Drawer */}
       {isOpen && (
-        <div className="border-b border-zinc-800 bg-zinc-950 md:hidden animate-in fade-in slide-in-from-top duration-200">
+        <div className="border-b border-zinc-800 bg-zinc-950 md:hidden motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top motion-safe:duration-200">
           <div className="space-y-1 px-2 pb-4 pt-2">
             {navigationItems.map((item) => (
               <a

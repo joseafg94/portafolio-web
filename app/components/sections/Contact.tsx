@@ -21,7 +21,7 @@ export default function Contact({ selectedService }: ContactProps) {
               {t.contact.sectionTitle}
             </h2>
             <p className="mt-4 text-base text-zinc-400 leading-relaxed">
-              Have a project in mind or need technical advice? Fill out the form, and we'll get back to you with a concrete proposal.
+              {t.contact.subtitle}
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function Contact({ selectedService }: ContactProps) {
                 <Mail size={18} />
               </div>
               <div>
-                <p className="text-xs font-mono text-zinc-500 uppercase tracking-wider">Email Us Directly</p>
+                <p className="text-xs font-mono text-zinc-500 uppercase tracking-wider">{t.contact.emailLabel2}</p>
                 <a href="mailto:hello@aethericstudio.com" className="text-sm font-semibold text-zinc-200 hover:text-emerald-400 transition-colors">
                   hello@aethericstudio.com
                 </a>
@@ -45,13 +45,13 @@ export default function Contact({ selectedService }: ContactProps) {
                 <Calendar size={18} />
               </div>
               <div>
-                <p className="text-xs font-mono text-zinc-500 uppercase tracking-wider">Prefer a video call?</p>
+                <p className="text-xs font-mono text-zinc-500 uppercase tracking-wider">{t.contact.callLabel}</p>
                 <a
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="text-sm font-semibold text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5 transition-colors cursor-pointer"
                 >
-                  Schedule a 15-min discovery call
+                  {t.contact.callCTA}
                 </a>
               </div>
             </div>

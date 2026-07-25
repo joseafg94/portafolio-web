@@ -21,7 +21,7 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono rounded-full border border-emerald-500/20">
-                Case Study — {project.category.toUpperCase()}
+                {t.projects.caseStudyLabel} {project.category.toUpperCase()}
               </span>
               <span className="px-3 py-1 bg-zinc-800 text-zinc-300 text-xs font-mono rounded-full border border-zinc-700">
                 {project.status.toUpperCase()}

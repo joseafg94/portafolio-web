@@ -28,7 +28,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
         className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center animate-in fade-in duration-300"
       >
         <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-400 mb-4" />
-        <h3 className="text-xl font-bold text-zinc-100 mb-2">Inquiry Received</h3>
+        <h3 className="text-xl font-bold text-zinc-100 mb-2">{t.contact.formTitle}</h3>
         <p className="text-sm text-zinc-400">{t.contact.success}</p>
       </div>
     );
@@ -96,7 +96,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-100 focus:border-emerald-500 focus:outline-none transition-colors appearance-none"
           required
         >
-          <option value="" disabled>Select a package</option>
+          <option value="" disabled>{t.contact.selectPlaceholder}</option>
           <option value="lead-engine">AI Lead Engine & Growth Web Presence</option>
           <option value="process-automation">Business Process Automation & Dashboard</option>
           <option value="custom-mvp">Full-Stack Custom Web App / SaaS MVP</option>
