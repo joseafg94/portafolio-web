@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n/context";
-import DecryptedText from "@/app/components/reactbits/DecryptedText";
+import TextReveal from "@/app/components/reactbits/TextReveal";
 import ShinyText from "@/app/components/reactbits/ShinyText";
 import Magnet from "@/app/components/reactbits/Magnet";
 
@@ -27,9 +27,9 @@ export default function Hero() {
         <ShinyText text={t.hero.badge} speed={6} className="font-mono" />
       </div>
 
-      {/* Headline H1 with DecryptedText effect */}
+      {/* Headline H1 with TextReveal effect */}
       <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] text-zinc-100">
-        <DecryptedText text={t.hero.title} speed={55} delay={200} />
+        <TextReveal text={t.hero.title} />
       </h1>
 
       {/* Subheadline */}
