@@ -29,7 +29,7 @@ export default function Hero() {
 
       {/* Headline H1 with DecryptedText effect */}
       <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] text-zinc-100">
-        <DecryptedText text={t.hero.title} speed={30} delay={100} />
+        <DecryptedText text={t.hero.title} speed={55} delay={200} />
       </h1>
 
       {/* Subheadline */}

@@ -11,7 +11,7 @@ interface DecryptedTextProps {
 
 export default function DecryptedText({
   text,
-  speed = 40,
+  speed = 55,
   delay = 50,
   className = "",
 }: DecryptedTextProps) {
@@ -57,7 +57,7 @@ export default function DecryptedText({
         if (iteration >= textLen) {
           clearInterval(interval);
         }
-        iteration += 1 / 3;
+        iteration += 1 / 5;
       }, speed);
 
       return () => clearInterval(interval);
