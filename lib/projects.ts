@@ -30,7 +30,7 @@ export const projects: ProjectData[] = [
     images: {
       cover: "/projects/meniva/cover.png",
     },
-    liveUrl: "https://meniva.app",
+    liveUrl: "https://getmeniva.vercel.app",
   },
   {
     id: "prefabricated-habitat",
