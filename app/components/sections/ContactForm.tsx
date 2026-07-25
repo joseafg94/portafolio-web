@@ -2,7 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n/context";
-import { sendEmail, ActionState } from "@/app/actions/send-email";
+import { sendEmail } from "@/app/actions/send-email";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 
 interface ContactFormProps {
@@ -14,7 +14,6 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
   const [state, formAction, isPending] = useActionState(sendEmail, null);
   const [service, setService] = useState(selectedService);
 
-  // Sync selectedService prop with internal state when it changes
   useEffect(() => {
     if (selectedService) {
       setService(selectedService);
@@ -23,7 +22,11 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
 
   if (state?.success) {
     return (
-      <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center animate-in fade-in duration-300">
+      <div 
+        role="status"
+        aria-live="polite" 
+        className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center animate-in fade-in duration-300"
+      >
         <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-400 mb-4" />
         <h3 className="text-xl font-bold text-zinc-100 mb-2">Inquiry Received</h3>
         <p className="text-sm text-zinc-400">{t.contact.success}</p>
@@ -34,7 +37,11 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
   return (
     <form action={formAction} className="space-y-6">
       {state?.errors?.general && (
-        <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 flex items-start gap-3">
+        <div 
+          role="alert"
+          aria-live="polite" 
+          className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 flex items-start gap-3"
+        >
           <AlertCircle className="h-5 w-5 text-red-400 shrink-0 mt-0.5" />
           <p className="text-xs text-red-400 leading-normal">{state.errors.general[0]}</p>
         </div>
@@ -54,7 +61,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           required
         />
         {state?.errors?.name && (
-          <p className="mt-1.5 text-xs text-red-400">{state.errors.name[0]}</p>
+          <p role="alert" className="mt-1.5 text-xs text-red-400">{state.errors.name[0]}</p>
         )}
       </div>
 
@@ -72,7 +79,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           required
         />
         {state?.errors?.email && (
-          <p className="mt-1.5 text-xs text-red-400">{state.errors.email[0]}</p>
+          <p role="alert" className="mt-1.5 text-xs text-red-400">{state.errors.email[0]}</p>
         )}
       </div>
 
@@ -95,7 +102,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           <option value="custom-mvp">Full-Stack Custom Web App / SaaS MVP</option>
         </select>
         {state?.errors?.service && (
-          <p className="mt-1.5 text-xs text-red-400">{state.errors.service[0]}</p>
+          <p role="alert" className="mt-1.5 text-xs text-red-400">{state.errors.service[0]}</p>
         )}
       </div>
 
@@ -113,7 +120,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           required
         />
         {state?.errors?.message && (
-          <p className="mt-1.5 text-xs text-red-400">{state.errors.message[0]}</p>
+          <p role="alert" className="mt-1.5 text-xs text-red-400">{state.errors.message[0]}</p>
         )}
       </div>
 
