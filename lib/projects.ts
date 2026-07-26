@@ -47,17 +47,17 @@ export const projects: ProjectData[] = [
     featured: false,
     year: 2025,
     problem: {
-      en: "A modular construction company needed a web presence that could clearly communicate the quality of its home designs and the science behind Passive House energy efficiency — overcoming the widespread perception that prefabricated means cheap or low-quality.",
-      es: "Una empresa de construcción modular necesitaba comunicar claramente la calidad de sus diseños y la ciencia detrás de los estándares Passive House, superando la percepción generalizada de que 'prefabricado' significa baja calidad.",
-    },
-    solution: {
-      en: "Built with the same production-grade stack we use for US clients (Next.js, TypeScript, Tailwind, Vercel): a performance-first marketing site with interactive home showcases, a full architecture-to-installation process breakdown, and lead capture via validated contact forms and WhatsApp — deployed globally on Vercel's edge network.",
-      es: "Construido con el mismo stack de producción que usamos para clientes en EE. UU. (Next.js, TypeScript, Tailwind, Vercel): un sitio marketing con showcases interactivos de diseños, explicación del proceso completo y captura de leads vía formularios validados y WhatsApp — desplegado en la red edge global de Vercel.",
-    },
-    result: {
-      en: "Delivered a brand-elevating digital presence that positions the company as a premium modular construction firm. The site is fully internationalization-ready and demonstrates that our engineering approach scales identically whether the client is in Panama, the US, or anywhere else.",
-      es: "Presencia digital que posiciona a la empresa como firma de construcción modular premium. El sitio está listo para internacionalización, demostrando que nuestra arquitectura de ingeniería escala igual sin importar el mercado del cliente.",
-    },
+  en: "A modular construction company needed a site that clearly showed the quality of its designs and Passive House engineering — overcoming the stigma that 'prefabricated' means low-quality.",
+  es: "Una empresa de construcción modular necesitaba un sitio que mostrara la calidad de sus diseños y la ingeniería Passive House, superando el estigma de que 'prefabricado' es sinónimo de baja calidad.",
+},
+solution: {
+  en: "Built with the same production-grade stack we use for US clients (Next.js, TypeScript, Tailwind, Vercel): interactive home showcases, a clear process breakdown, and lead capture via forms and WhatsApp.",
+  es: "Construido con el mismo stack que usamos para clientes en EE. UU. (Next.js, TypeScript, Tailwind, Vercel): showcases interactivos, explicación clara del proceso y captura de leads vía formularios y WhatsApp.",
+},
+result: {
+  en: "A brand-elevating site that positions the company as a premium modular builder — proof our engineering scales the same whether the client is in Panama, the US, or anywhere else.",
+  es: "Un sitio que posiciona a la empresa como constructora modular premium — prueba de que nuestra ingeniería escala igual sin importar el mercado del cliente.",
+},
     metrics: [],
     techStack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Resend", "Vercel"],
     images: {
