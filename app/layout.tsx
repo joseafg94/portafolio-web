@@ -15,12 +15,16 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Aetheric Studio | Premium Software Engineering",
     description:
       "We build ultra-fast web applications, business dashboards, and custom SaaS MVPs for small and medium businesses in the US.",
+    alternates: {
+      canonical: "https://aethericstudio.com",
+    },
     openGraph: {
       title: "Aetheric Studio | Premium Software Engineering",
       description:
         "We build ultra-fast web applications, business dashboards, and custom SaaS MVPs for small and medium businesses in the US.",
       url: "https://aethericstudio.com",
       siteName: "Aetheric Studio",
+      locale: "en_US",
       images: [
         {
           url: "/og-image.png",
@@ -30,6 +34,13 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Aetheric Studio | Premium Software Engineering",
+      description:
+        "We build ultra-fast web apps, dashboards, and SaaS MVPs for US small businesses — without the agency price tag.",
+      images: ["/og-image.png"],
     },
     robots: {
       index: true,

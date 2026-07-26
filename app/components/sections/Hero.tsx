@@ -40,19 +40,21 @@ export default function Hero() {
       {/* Call to Actions */}
       <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
         {/* Primary CTA (Magnet) */}
-        <Magnet onClick={() => handleScroll("contact")}>
+        <Magnet onClick={() => handleScroll("services")}>
           <button className="w-full sm:w-auto rounded-xl bg-emerald-500 px-7 py-4 text-sm font-bold text-zinc-950 hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/10 cursor-pointer">
             {t.hero.ctaPrimary}
           </button>
         </Magnet>
 
         {/* Secondary CTA */}
-        <button
-          onClick={() => handleScroll("work")}
-          className="w-full sm:w-auto rounded-xl border border-zinc-800 bg-zinc-900/30 px-7 py-4 text-sm font-semibold text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors cursor-pointer"
+        <a
+          href="https://calendly.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full sm:w-auto text-center rounded-xl border border-zinc-800 bg-zinc-900/30 px-7 py-4 text-sm font-semibold text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors cursor-pointer"
         >
           {t.hero.ctaSecondary}
-        </button>
+        </a>
       </div>
     </section>
   );

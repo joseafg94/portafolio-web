@@ -6,8 +6,8 @@ export const es: Dictionary = {
     title: "Ingeniería full-stack para pequeños negocios en EE. UU. — sin el precio de una agencia.",
     subtitle:
       "Somos el equipo detrás de Meniva, una plataforma SaaS multiempresa en producción. Ahora creamos automatizaciones, dashboards y MVPs para negocios como el tuyo — entregados en semanas, no meses.",
-    ctaPrimary: "Solicitar Cotización Gratis",
-    ctaSecondary: "Ver Trabajos",
+    ctaPrimary: "Ver Paquetes",
+    ctaSecondary: "Agendar llamada de 15 min",
   },
   nav: {
     work: "Trabajos",
@@ -84,10 +84,26 @@ export const es: Dictionary = {
     body: "Somos un estudio de software enfocado, construido sobre un principio: entregar software de nivel producción rápido, sin el peso de una agencia grande. Nuestra base es Meniva — una plataforma SaaS multiempresa en producción que atiende clientes de restaurantes en Panamá, construida desde cero con Next.js, Supabase y una arquitectura multiempresa real usando Row Level Security.",
     bodyTwo: "Esa experiencia es lo que aportamos a cada proyecto. Ya sea un dashboard de automatización de negocio, un motor de leads con IA, o un MVP de SaaS a medida, abordamos tu problema de la misma manera: primero entender el sistema, luego construirlo correctamente.",
     tagline: "Somos ágiles porque somos ingenieros, no gerentes de proyecto.",
+    stats: [
+      { value: "1", label: "Producto SaaS en vivo", sub: "Meniva en producción" },
+      { value: "5sem", label: "Entrega más rápida", sub: "SaaS MVP completo" },
+      { value: "100%", label: "TypeScript", sub: "Modo estricto, sin any" },
+      { value: "RLS", label: "Modelo de seguridad", sub: "Supabase Row Level" },
+    ],
   },
   techStack: {
     sectionTitle: "Nuestro Stack",
     sectionSubtitle: "Probado en producción. Sin reinventar la rueda.",
+    descriptions: {
+      "Next.js": "App Router, Componentes de Servidor",
+      "TypeScript": "Modo estricto, sin `any`",
+      "Tailwind CSS": "v4, estilos utility-first",
+      "Supabase": "Postgres, Auth, RLS, Tiempo real",
+      "Vercel": "Deploy en edge, analíticas",
+      "Resend": "Email transaccional vía API",
+      "Framer Motion": "Animaciones de nivel producción",
+      "Zod": "Validación de esquemas en runtime",
+    },
   },
   faq: {
     sectionTitle: "Preguntas Frecuentes",

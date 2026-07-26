@@ -28,12 +28,7 @@ export default function About() {
 
         {/* Right: Stats / Visual Block */}
         <div className="grid grid-cols-2 gap-4">
-          {[
-            { value: "1", label: "Live SaaS Product", sub: "Meniva in production" },
-            { value: "5wk", label: "Fastest Delivery", sub: "Full SaaS MVP" },
-            { value: "100%", label: "TypeScript", sub: "Strict mode, no any" },
-            { value: "RLS", label: "Security Model", sub: "Supabase Row Level" },
-          ].map((stat) => (
+          {t.about.stats.map((stat) => (
             <div
               key={stat.label}
               className="rounded-2xl bg-zinc-900/40 border border-zinc-800 p-6 hover:border-zinc-700 transition-colors duration-300"

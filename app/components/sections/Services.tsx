@@ -9,7 +9,7 @@ interface ServicesProps {
 }
 
 export default function Services({ onSelectService }: ServicesProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   const handleSelect = (serviceId: string) => {
     onSelectService(serviceId);
@@ -42,8 +42,8 @@ export default function Services({ onSelectService }: ServicesProps) {
                 <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 ring-1 ring-inset ring-emerald-500/20 mb-3">
                   {service.spotsLeft} {t.services.spotsLeft}
                 </span>
-                <h3 className="text-xl font-bold text-zinc-100">{service.name}</h3>
-                <p className="mt-2 text-sm text-zinc-400">{service.tagline}</p>
+                <h3 className="text-xl font-bold text-zinc-100">{service.name[locale]}</h3>
+                <p className="mt-2 text-sm text-zinc-400">{service.tagline[locale]}</p>
               </div>
 
               {/* Pricing */}
@@ -54,9 +54,16 @@ export default function Services({ onSelectService }: ServicesProps) {
                 <p className="mt-1 text-3xl font-extrabold text-emerald-400">
                   {service.foundingPrice}
                 </p>
-                <p className="mt-2 text-[11px] text-zinc-500 font-mono">
-                  * {t.services.foundingNotice}
-                </p>
+                {service.retainerNote && (
+                  <p className="mt-1 text-[10px] text-zinc-500 font-mono leading-relaxed">
+                    {service.retainerNote[locale]}
+                  </p>
+                )}
+                {service.foundingNotice && (
+                  <p className="mt-2 text-[11px] text-emerald-500/80 font-mono leading-relaxed">
+                    ✦ {service.foundingNotice[locale]}
+                  </p>
+                )}
                 <p className="mt-1 text-xs text-zinc-400 font-mono">
                   {t.services.deliveryPrefix} {service.deliveryTime}
                 </p>
@@ -71,7 +78,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                   {service.includes.map((inc, i) => (
                     <li key={i} className="flex items-start text-xs text-zinc-300">
                       <Check className="mr-2 h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>{inc}</span>
+                      <span>{inc[locale]}</span>
                     </li>
                   ))}
                 </ul>
@@ -87,7 +94,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                     {service.excludes.map((exc, i) => (
                       <li key={i} className="flex items-start text-xs text-zinc-500">
                         <X className="mr-2 h-4 w-4 text-zinc-700 shrink-0 mt-0.5" />
-                        <span>{exc}</span>
+                        <span>{exc[locale]}</span>
                       </li>
                     ))}
                   </ul>
@@ -100,7 +107,7 @@ export default function Services({ onSelectService }: ServicesProps) {
               onClick={() => handleSelect(service.id)}
               className="mt-6 w-full rounded-xl bg-zinc-800 py-3 text-xs font-bold text-zinc-100 hover:bg-emerald-500 hover:text-zinc-950 transition-all cursor-pointer"
             >
-              {service.ctaLabel}
+              {service.ctaLabel[locale]}
             </button>
           </div>
         ))}

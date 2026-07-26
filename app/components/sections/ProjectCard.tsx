@@ -11,10 +11,10 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   return (
-    <SpotlightCard className="flex flex-col h-full bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition-colors duration-300">
+    <SpotlightCard className="flex flex-col bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition-colors duration-300">
       {/* Cover Image */}
       <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950 mb-4 shrink-0">
         <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 to-zinc-900 flex items-center justify-center p-4">
@@ -50,21 +50,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <span className="text-red-400 font-semibold text-[10px] font-mono uppercase tracking-wider block mb-0.5">
             {t.projects.problemLabel}
           </span>
-          <p className="text-[11px] text-zinc-400 leading-normal line-clamp-2">{project.problem}</p>
+          <p className="text-[11px] text-zinc-400 leading-normal">{project.problem[locale]}</p>
         </div>
 
         <div className="p-3 bg-zinc-950/40 rounded-lg border border-zinc-900">
           <span className="text-indigo-400 font-semibold text-[10px] font-mono uppercase tracking-wider block mb-0.5">
             {t.projects.solutionLabel}
           </span>
-          <p className="text-[11px] text-zinc-400 leading-normal line-clamp-2">{project.solution}</p>
+          <p className="text-[11px] text-zinc-400 leading-normal">{project.solution[locale]}</p>
         </div>
 
         <div className="p-3 bg-zinc-950/40 rounded-lg border border-zinc-900">
           <span className="text-emerald-400 font-semibold text-[10px] font-mono uppercase tracking-wider block mb-0.5">
             {t.projects.resultLabel}
           </span>
-          <p className="text-[11px] text-zinc-400 leading-normal line-clamp-2">{project.result}</p>
+          <p className="text-[11px] text-zinc-400 leading-normal">{project.result[locale]}</p>
         </div>
       </div>
 

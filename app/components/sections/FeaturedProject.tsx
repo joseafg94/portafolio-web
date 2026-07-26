@@ -11,7 +11,7 @@ interface FeaturedProjectProps {
 }
 
 export default function FeaturedProject({ project }: FeaturedProjectProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   return (
     <SpotlightCard className="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-colors duration-300">
@@ -36,21 +36,21 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
                 <span className="text-red-400 font-semibold text-xs flex items-center gap-1 mb-1 font-mono uppercase tracking-wider">
                   {t.projects.problemLabel}
                 </span>
-                <p className="text-xs text-zinc-300 leading-relaxed">{project.problem}</p>
+                <p className="text-xs text-zinc-300 leading-relaxed">{project.problem[locale]}</p>
               </div>
 
               <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
                 <span className="text-indigo-400 font-semibold text-xs flex items-center gap-1 mb-1 font-mono uppercase tracking-wider">
                   {t.projects.solutionLabel}
                 </span>
-                <p className="text-xs text-zinc-300 leading-relaxed">{project.solution}</p>
+                <p className="text-xs text-zinc-300 leading-relaxed">{project.solution[locale]}</p>
               </div>
 
               <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
                 <span className="text-emerald-400 font-semibold text-xs flex items-center gap-1 mb-1 font-mono uppercase tracking-wider">
                   {t.projects.resultLabel}
                 </span>
-                <p className="text-xs text-zinc-300 leading-relaxed">{project.result}</p>
+                <p className="text-xs text-zinc-300 leading-relaxed">{project.result[locale]}</p>
               </div>
             </div>
           </div>
@@ -86,11 +86,9 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
         {/* Right Side: Image and Metrics */}
         <div className="flex flex-col justify-between gap-6">
           <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
-            {/* We will render a placeholder or a stylized visual block since no physical image assets exist yet */}
             <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 to-zinc-900 flex items-center justify-center p-4">
               <span className="text-xs font-mono text-zinc-600">Case Study Visualization</span>
             </div>
-            {/* Fallback layout image for Next.js Image component when src starts with '/' */}
             <Image
               src={project.images.cover}
               alt={project.title}
@@ -99,7 +97,6 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
               className="object-cover opacity-80 mix-blend-luminosity hover:opacity-100 hover:mix-blend-normal transition-all duration-300"
               sizes="(max-width: 1024px) 100vw, 50vw"
               onError={(e) => {
-                // If local image fails to load, keep the styled fallback background visible
                 e.currentTarget.style.display = "none";
               }}
             />
@@ -109,10 +106,10 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
           {project.metrics && project.metrics.length > 0 && (
             <div className="grid grid-cols-3 gap-4">
               {project.metrics.map((metric) => (
-                <div key={metric.label} className="p-4 bg-zinc-950/40 rounded-xl border border-zinc-900 text-center">
+                <div key={metric.label.en} className="p-4 bg-zinc-950/40 rounded-xl border border-zinc-900 text-center">
                   <p className="text-xl font-extrabold text-emerald-400">{metric.value}</p>
                   <p className="mt-1 text-[10px] uppercase font-mono tracking-wider text-zinc-500">
-                    {metric.label}
+                    {metric.label[locale]}
                   </p>
                 </div>
               ))}

@@ -3,54 +3,14 @@
 import { useI18n } from "@/lib/i18n/context";
 
 const STACK = [
-  {
-    name: "Next.js",
-    description: "App Router, Server Components",
-    icon: "▲",
-    color: "text-zinc-100",
-  },
-  {
-    name: "TypeScript",
-    description: "Strict mode, zero `any`",
-    icon: "TS",
-    color: "text-blue-400",
-  },
-  {
-    name: "Tailwind CSS",
-    description: "v4, utility-first styling",
-    icon: "⚡",
-    color: "text-cyan-400",
-  },
-  {
-    name: "Supabase",
-    description: "Postgres, Auth, RLS, Realtime",
-    icon: "◆",
-    color: "text-emerald-400",
-  },
-  {
-    name: "Vercel",
-    description: "Edge deployment, analytics",
-    icon: "▲",
-    color: "text-zinc-300",
-  },
-  {
-    name: "Resend",
-    description: "Transactional email via API",
-    icon: "✉",
-    color: "text-indigo-400",
-  },
-  {
-    name: "Framer Motion",
-    description: "Production-grade animations",
-    icon: "◉",
-    color: "text-pink-400",
-  },
-  {
-    name: "Zod",
-    description: "Runtime schema validation",
-    icon: "⬡",
-    color: "text-amber-400",
-  },
+  { name: "Next.js", icon: "▲", color: "text-zinc-100" },
+  { name: "TypeScript", icon: "TS", color: "text-blue-400" },
+  { name: "Tailwind CSS", icon: "⚡", color: "text-cyan-400" },
+  { name: "Supabase", icon: "◆", color: "text-emerald-400" },
+  { name: "Vercel", icon: "▲", color: "text-zinc-300" },
+  { name: "Resend", icon: "✉", color: "text-indigo-400" },
+  { name: "Framer Motion", icon: "◉", color: "text-pink-400" },
+  { name: "Zod", icon: "⬡", color: "text-amber-400" },
 ] as const;
 
 export default function TechStack() {
@@ -78,7 +38,9 @@ export default function TechStack() {
             </span>
             <div className="min-w-0">
               <p className="text-sm font-semibold text-zinc-100 truncate">{tech.name}</p>
-              <p className="text-[10px] text-zinc-500 truncate mt-0.5">{tech.description}</p>
+              <p className="text-[10px] text-zinc-500 truncate mt-0.5">
+                {t.techStack.descriptions[tech.name]}
+              </p>
             </div>
           </div>
         ))}
@@ -86,3 +48,4 @@ export default function TechStack() {
     </section>
   );
 }
+

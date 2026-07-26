@@ -4,8 +4,8 @@ export const en = {
     title: "Full-stack engineering for US small businesses — without the agency price tag.",
     subtitle:
       "We're the team behind Meniva, a live multi-tenant SaaS platform. Now we build automation, dashboards, and MVPs for businesses like yours — delivered in weeks, not months.",
-    ctaPrimary: "Get a Free Quote",
-    ctaSecondary: "View Work",
+    ctaPrimary: "View Packages",
+    ctaSecondary: "Book a 15-Min Call",
   },
   nav: {
     work: "Work",
@@ -82,10 +82,26 @@ export const en = {
     body: "We're a focused software studio built around one principle: ship production-grade software fast, without the bloat of a large agency. Our foundation is Meniva — a live, multi-tenant SaaS platform serving restaurant clients across Panama, built from the ground up with Next.js, Supabase, and a real-world multi-tenant architecture using Row Level Security.",
     bodyTwo: "That experience is what we bring to every project. Whether it's a business automation dashboard, an AI-powered lead engine, or a custom SaaS MVP, we approach your problem the same way: understand the system first, then engineer it properly.",
     tagline: "We're lean because we're engineers, not project managers.",
+    stats: [
+      { value: "1", label: "Live SaaS Product", sub: "Meniva in production" },
+      { value: "5wk", label: "Fastest Delivery", sub: "Full SaaS MVP" },
+      { value: "100%", label: "TypeScript", sub: "Strict mode, no any" },
+      { value: "RLS", label: "Security Model", sub: "Supabase Row Level" },
+    ],
   },
   techStack: {
     sectionTitle: "Our Stack",
     sectionSubtitle: "Production-tested. No reinventing the wheel.",
+    descriptions: {
+      "Next.js": "App Router, Server Components",
+      "TypeScript": "Strict mode, zero `any`",
+      "Tailwind CSS": "v4, utility-first styling",
+      "Supabase": "Postgres, Auth, RLS, Realtime",
+      "Vercel": "Edge deployment, analytics",
+      "Resend": "Transactional email via API",
+      "Framer Motion": "Production-grade animations",
+      "Zod": "Runtime schema validation",
+    },
   },
   faq: {
     sectionTitle: "Frequently Asked Questions",
