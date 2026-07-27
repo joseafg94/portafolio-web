@@ -43,10 +43,10 @@ export const services: ServiceData[] = [
     },
     includes: [
       { en: "Up to 5 sections with custom design (no templates)", es: "Hasta 5 secciones con diseño personalizado (no plantillas)" },
-      { en: "AI chatbot trained with business information", es: "Chatbot de IA entrenado con información del negocio" },
+      { en: "Custom AI assistant that answers questions and captures leads 24/7", es: "Un asistente de IA que trabaja por ti — captura leads y responde clientes a toda hora" },
       { en: "Calendly / Cal.com integration", es: "Integración de agendamiento con Calendly o Cal.com" },
       { en: "Lead alerts via email and SMS", es: "Alertas de leads por correo electrónico y SMS" },
-      { en: "Validated contact forms", es: "Formularios de contacto validados" },
+      { en: "Lead capture forms — clean data, zero spam", es: "Formularios inteligentes — solo contactos reales" },
       { en: "GA4 configuration", es: "Configuración de GA4" },
       { en: "Vercel deployment & domain setup", es: "Despliegue en Vercel y configuración de dominio" },
     ],
@@ -100,7 +100,7 @@ export const services: ServiceData[] = [
       es: "Opción de hitos 50/50 o 40/30/30",
     },
     includes: [
-      { en: "Workflow audit session", es: "Sesión de auditoría de flujo de trabajo" },
+      { en: "Workflow audit — we map how your business actually runs before writing a single line of code", es: "Auditoría de operaciones — primero entendemos tu negocio por dentro, luego construimos" },
       { en: "Custom Next.js + Supabase dashboard", es: "Dashboard de operaciones a medida (Next.js + Supabase)" },
       { en: "Role-based access control (RBAC)", es: "Control de acceso basado en roles (RBAC)" },
       { en: "Automated PDF generation (quotes/invoices)", es: "Generación automática de PDFs (cotizaciones/facturas)" },
@@ -127,8 +127,8 @@ export const services: ServiceData[] = [
       es: "Aplicación Web Full-Stack / SaaS MVP",
     },
     tagline: {
-      en: "Scope tight, build fast, ship to production.",
-      es: "Alcance acotado, construcción rápida, directo a producción.",
+      en: "From idea to live product — in weeks, not months.",
+      es: "De la idea al producto en vivo — semanas, no meses.",
     },
     regularPrice: {
       en: "$6,000–$7,500",
