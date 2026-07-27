@@ -28,6 +28,7 @@ export const en = {
     sectionSubtitle: "Transparent, fixed-scope engineering packages.",
     foundingNotice: "Includes a 60-second video testimonial after delivery",
     spotsLeft: "spots left at early partner rate",
+    spotsStatus: "{taken} taken. {remaining} remaining.",
     regularPrefix: "Reg:",
     deliveryPrefix: "Delivery:",
     includes: "What's included",

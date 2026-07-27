@@ -23,11 +23,16 @@ export const services: ServiceData[] = [
       en: "Monthly retainer covers: infrastructure maintenance, AI API usage, and minor updates.",
       es: "El retainer mensual cubre: mantenimiento de infraestructura, uso de APIs de IA y actualizaciones menores.",
     },
-    foundingNotice: {
-      en: "Early Partner Program: Get $450+ off setup when you share a 60-second video testimonial.",
-      es: "Programa Early Partner: Obtén $450+ de descuento en setup a cambio de un video testimonial de 60 segundos.",
+    foundingHeadline: {
+      en: "⚡ Founding Partner Rate — 3 spots only",
+      es: "⚡ Tarifa de Socio Fundador — 3 cupos únicamente",
     },
-    spotsLeft: 3,
+    foundingNotice: {
+      en: "You pay less. We earn proof. We're taking 3 clients at a reduced rate in exchange for one thing: an honest 60-second video after launch — win or lose, your real words. No lock-in. No fine print. Just a fair trade between two businesses that need something from each other.",
+      es: "Tú pagas menos. Nosotros ganamos pruebas. Tomaremos 3 clientes a una tarifa reducida a cambio de una cosa: un video honesto de 60 segundos después del lanzamiento — ganes o pierdas, tus palabras reales. Sin ataduras. Sin letra pequeña. Solo un trato justo entre dos negocios que necesitan algo el uno del otro.",
+    },
+    spotsTaken: 2,
+    spotsTotal: 3,
     deliveryTime: {
       en: "5–7 business days",
       es: "5–7 días hábiles",
@@ -73,14 +78,19 @@ export const services: ServiceData[] = [
       es: "$3,500–$4,800",
     },
     foundingPrice: {
-      en: "$2,200–$2,500",
-      es: "$2,200–$2,500",
+      en: "$2,350",
+      es: "$2,350",
+    },
+    foundingHeadline: {
+      en: "⚡ Founding Partner Rate — 2 spots only",
+      es: "⚡ Tarifa de Socio Fundador — 2 cupos únicamente",
     },
     foundingNotice: {
-      en: "Early Partner Program: Save $1,300+ on your dashboard build when you share a 60-second video testimonial.",
-      es: "Programa Early Partner: Ahorra más de $1,300 en tu dashboard a cambio de un video testimonial de 60 segundos.",
+      en: "You get a $4,800 system. You pay $2,350. In exchange: an honest 60-second video after launch. We're building our case study portfolio. You get a custom internal system at a price that doesn't exist anywhere else in the market.",
+      es: "Obtienes un sistema de $4,800. Pagas $2,350. A cambio: un video honesto de 60 segundos después del lanzamiento. Estamos construyendo nuestro portafolio de casos de estudio. Obtienes un sistema interno a medida a un precio que no existe en ningún otro lugar del mercado.",
     },
-    spotsLeft: 2,
+    spotsTaken: 1,
+    spotsTotal: 2,
     deliveryTime: {
       en: "2–3 weeks",
       es: "2–3 semanas",
@@ -128,11 +138,16 @@ export const services: ServiceData[] = [
       en: "$3,200–$3,500",
       es: "$3,200–$3,500",
     },
-    foundingNotice: {
-      en: "Early Partner Program: Save $2,800+ on your MVP build when you share a 60-second video testimonial.",
-      es: "Programa Early Partner: Ahorra más de $2,800 en tu MVP a cambio de un video testimonial de 60 segundos.",
+    foundingHeadline: {
+      en: "⚡ Founding Partner Rate — 2 spots only",
+      es: "⚡ Tarifa de Socio Fundador — 2 cupos únicamente",
     },
-    spotsLeft: 2,
+    foundingNotice: {
+      en: "Production-ready SaaS MVP. Weeks, not months. At a price that makes no sense for anyone but us right now. We already built one: Meniva — a live multi-tenant SaaS serving restaurants in Panama. We know the stack, the patterns, and the mistakes to avoid. You get speed and experience. We get a case study. Fair trade.",
+      es: "SaaS MVP listo para producción. Semanas, no meses. A un precio que no tiene sentido para nadie más que para nosotros en este momento. Ya construimos uno: Meniva — un SaaS multiempresa en vivo que atiende restaurantes en Panamá. Conocemos el stack, los patrones y los errores que se deben evitar. Tú obtienes velocidad y experiencia. Nosotros un caso de estudio. Trato justo.",
+    },
+    spotsTaken: 1,
+    spotsTotal: 2,
     deliveryTime: {
       en: "3–5 weeks",
       es: "3–5 semanas",

@@ -6,12 +6,14 @@ export interface ServiceData {
   tagline: LocaleString;
   regularPrice: LocaleString;
   foundingPrice: LocaleString;
-  spotsLeft: number;
+  spotsTaken: number;
+  spotsTotal: number;
   deliveryTime: LocaleString;
   paymentTerms: LocaleString;
   includes: LocaleString[];
   excludes: LocaleString[];
   ctaLabel: LocaleString;
+  foundingHeadline?: LocaleString;
   foundingNotice?: LocaleString;
   retainerNote?: LocaleString;
 }

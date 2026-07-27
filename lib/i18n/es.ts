@@ -30,6 +30,7 @@ export const es: Dictionary = {
     sectionSubtitle: "Paquetes de ingeniería transparentes y de alcance fijo.",
     foundingNotice: "Incluye un testimonio en video de 60 segundos después de la entrega",
     spotsLeft: "cupos disponibles a tarifa de socio fundador",
+    spotsStatus: "{taken} tomados. {remaining} restante(s).",
     regularPrefix: "Precio regular:",
     deliveryPrefix: "Entrega:",
     includes: "Qué incluye",

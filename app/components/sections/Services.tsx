@@ -31,43 +31,66 @@ export default function Services({ onSelectService }: ServicesProps) {
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 hover:border-zinc-700 transition-all hover:bg-zinc-900/60 duration-300"
-          >
-            <div>
-              {/* Header */}
-              <div className="mb-6">
-                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 ring-1 ring-inset ring-emerald-500/20 mb-3">
-                  {service.spotsLeft} {t.services.spotsLeft}
-                </span>
-                <h3 className="text-xl font-bold text-zinc-100">{service.name[locale]}</h3>
-                <p className="mt-2 text-sm text-zinc-400">{service.tagline[locale]}</p>
-              </div>
+        {services.map((service) => {
+          const remaining = service.spotsTotal - service.spotsTaken;
+          const spotsStatusText = t.services.spotsStatus
+            ? t.services.spotsStatus
+                .replace("{taken}", service.spotsTaken.toString())
+                .replace("{remaining}", remaining.toString())
+            : `${remaining} spots left`;
 
-              {/* Pricing */}
-              <div className="mb-6 border-y border-zinc-800 py-6">
-                <p className="text-xs text-zinc-500 line-through">
-                  {t.services.regularPrefix} {service.regularPrice[locale]}
-                </p>
-                <p className="mt-1 text-3xl font-extrabold text-emerald-400">
-                  {service.foundingPrice[locale]}
-                </p>
-                {service.retainerNote && (
-                  <p className="mt-1 text-[10px] text-zinc-500 font-mono leading-relaxed">
-                    {service.retainerNote[locale]}
+          return (
+            <div
+              key={service.id}
+              className="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 hover:border-zinc-700 transition-all hover:bg-zinc-900/60 duration-300"
+            >
+              <div>
+                {/* Header */}
+                <div className="mb-6">
+                  <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 ring-1 ring-inset ring-emerald-500/20 mb-3">
+                    {spotsStatusText}
+                  </span>
+                  <h3 className="text-xl font-bold text-zinc-100">{service.name[locale]}</h3>
+                  <p className="mt-2 text-sm text-zinc-400">{service.tagline[locale]}</p>
+                </div>
+
+                {/* Pricing & Founding Offer */}
+                <div className="mb-6 border-y border-zinc-800 py-6">
+                  {service.foundingHeadline && (
+                    <div className="mb-3">
+                      <p className="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">
+                        {service.foundingHeadline[locale]}
+                      </p>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-3xl font-extrabold text-emerald-400">
+                      {service.foundingPrice[locale]}
+                    </p>
+                    <p className="text-xs text-zinc-500 line-through">
+                      {t.services.regularPrefix} {service.regularPrice[locale]}
+                    </p>
+                  </div>
+
+                  {service.retainerNote && (
+                    <p className="mt-1 text-[10px] text-zinc-500 font-mono leading-relaxed">
+                      {service.retainerNote[locale]}
+                    </p>
+                  )}
+
+                  {service.foundingNotice && (
+                    <div className="mt-4 rounded-xl bg-zinc-950/60 border border-zinc-800/80 p-3.5">
+                      <p className="text-[11px] text-zinc-400 leading-relaxed font-sans">
+                        {service.foundingNotice[locale]}
+                      </p>
+                    </div>
+                  )}
+                  
+                  <p className="mt-3.5 text-xs text-zinc-500 font-mono">
+                    {t.services.deliveryPrefix} {service.deliveryTime[locale]}
                   </p>
-                )}
-                {service.foundingNotice && (
-                  <p className="mt-2 text-[11px] text-emerald-500/80 font-mono leading-relaxed">
-                    ✦ {service.foundingNotice[locale]}
-                  </p>
-                )}
-                <p className="mt-1 text-xs text-zinc-400 font-mono">
-                  {t.services.deliveryPrefix} {service.deliveryTime[locale]}
-                </p>
-              </div>
+                </div>
 
               {/* Inclusions */}
               <div className="mb-8">
@@ -110,7 +133,8 @@ export default function Services({ onSelectService }: ServicesProps) {
               {service.ctaLabel[locale]}
             </button>
           </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
