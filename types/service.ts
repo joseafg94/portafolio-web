@@ -4,11 +4,11 @@ export interface ServiceData {
   id: string;
   name: LocaleString;
   tagline: LocaleString;
-  regularPrice: string;
-  foundingPrice: string;
+  regularPrice: LocaleString;
+  foundingPrice: LocaleString;
   spotsLeft: number;
-  deliveryTime: string;
-  paymentTerms: string;
+  deliveryTime: LocaleString;
+  paymentTerms: LocaleString;
   includes: LocaleString[];
   excludes: LocaleString[];
   ctaLabel: LocaleString;

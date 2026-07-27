@@ -23,7 +23,7 @@ export default function Nav() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="font-mono text-lg font-bold tracking-wider text-zinc-100">
-              AETHERIC<span className="text-emerald-400">STUDIO</span>
+              KVASIR<span className="text-emerald-400">LABS</span>
             </a>
           </div>
 

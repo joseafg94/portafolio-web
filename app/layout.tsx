@@ -11,33 +11,33 @@ const inter = Inter({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    metadataBase: new URL("https://aethericstudio.com"),
-    title: "Aetheric Studio | Premium Software Engineering",
+    metadataBase: new URL("https://kvasirlabs.com"),
+    title: "Kvasir Labs | Premium Software Engineering",
     description:
       "We build ultra-fast web applications, business dashboards, and custom SaaS MVPs for small and medium businesses in the US.",
     alternates: {
-      canonical: "https://aethericstudio.com",
+      canonical: "https://kvasirlabs.com",
     },
     openGraph: {
-      title: "Aetheric Studio | Premium Software Engineering",
+      title: "Kvasir Labs | Premium Software Engineering",
       description:
         "We build ultra-fast web applications, business dashboards, and custom SaaS MVPs for small and medium businesses in the US.",
-      url: "https://aethericstudio.com",
-      siteName: "Aetheric Studio",
+      url: "https://kvasirlabs.com",
+      siteName: "Kvasir Labs",
       locale: "en_US",
       images: [
         {
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Aetheric Studio - Premium Software Engineering",
+          alt: "Kvasir Labs - Premium Software Engineering",
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "Aetheric Studio | Premium Software Engineering",
+      title: "Kvasir Labs | Premium Software Engineering",
       description:
         "We build ultra-fast web apps, dashboards, and SaaS MVPs for US small businesses — without the agency price tag.",
       images: ["/og-image.png"],

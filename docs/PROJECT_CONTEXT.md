@@ -1,6 +1,6 @@
-# [NOMBRE AGENCIA] — Contexto Maestro del Portafolio
+# Kvasir Labs — Contexto Maestro del Portafolio
 
-> ⚠️ Reemplazar `[NOMBRE AGENCIA]` en todo el proyecto una vez definido el nombre.
+> ⚠️ Reemplazar `Kvasir Labs` en todo el proyecto una vez definido el nombre.
 
 ## 1. Qué es esto y para quién
 
@@ -152,7 +152,7 @@ Zod (Server Actions) · Vercel · Vercel Analytics.
 
 ## 11. Pendientes a definir
 
-- [ ] Nombre de la agencia (placeholder `[NOMBRE AGENCIA]` en todo el código)
+- [x] Nombre de la agencia (placeholder `Kvasir Labs` en todo el código)
 - [ ] Dominio propio y email profesional (hola@dominio.com)
 - [ ] Headline final del Hero (draft sugerido más abajo)
 - [ ] Screenshots/video Loom de Meniva para el showcase

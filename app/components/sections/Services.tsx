@@ -49,10 +49,10 @@ export default function Services({ onSelectService }: ServicesProps) {
               {/* Pricing */}
               <div className="mb-6 border-y border-zinc-800 py-6">
                 <p className="text-xs text-zinc-500 line-through">
-                  {t.services.regularPrefix} {service.regularPrice}
+                  {t.services.regularPrefix} {service.regularPrice[locale]}
                 </p>
                 <p className="mt-1 text-3xl font-extrabold text-emerald-400">
-                  {service.foundingPrice}
+                  {service.foundingPrice[locale]}
                 </p>
                 {service.retainerNote && (
                   <p className="mt-1 text-[10px] text-zinc-500 font-mono leading-relaxed">
@@ -65,7 +65,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                   </p>
                 )}
                 <p className="mt-1 text-xs text-zinc-400 font-mono">
-                  {t.services.deliveryPrefix} {service.deliveryTime}
+                  {t.services.deliveryPrefix} {service.deliveryTime[locale]}
                 </p>
               </div>
 

@@ -12,20 +12,20 @@ export default function Footer() {
           {/* Logo / Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
             <span className="font-mono text-sm font-bold tracking-wider text-zinc-100">
-              AETHERIC<span className="text-emerald-400">STUDIO</span>
+              KVASIR<span className="text-emerald-400">LABS</span>
             </span>
             <p className="text-xs text-zinc-500">
-              © {new Date().getFullYear()} Aetheric Studio. {t.footer.rights}
+              © {new Date().getFullYear()} Kvasir Labs. {t.footer.rights}
             </p>
           </div>
 
           {/* Contact Email & Socials */}
           <div className="flex flex-col items-center md:items-end gap-2">
             <a
-              href="mailto:hello@aethericstudio.com"
+              href="mailto:hello@kvasirlabs.com"
               className="text-sm text-zinc-300 hover:text-emerald-400 transition-colors"
             >
-              hello@aethericstudio.com
+              hello@kvasirlabs.com
             </a>
             <div className="flex space-x-4 text-xs">
               <a href="#" className="hover:text-zinc-100 transition-colors">
