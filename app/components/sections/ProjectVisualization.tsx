@@ -100,18 +100,20 @@ export default function ProjectVisualization({
             ))}
           </div>
 
-          {/* Tab image */}
-          <div className="relative aspect-video w-full bg-zinc-950">
-            <Image
-              src={tabs[activeTab].src}
-              alt={tabs[activeTab].label}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
+          {/* Tab image — fixed max-height, object-contain, centered */}
+          <div className="flex items-center justify-center bg-zinc-950/50 px-4 py-5 min-h-[320px] max-h-[500px]">
+            <div className="relative w-full h-[420px]">
+              <Image
+                src={tabs[activeTab].src}
+                alt={tabs[activeTab].label}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
           </div>
         </div>
       )}
