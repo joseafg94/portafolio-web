@@ -1,17 +1,27 @@
 "use client";
 
-import Image from "next/image";
 import { ProjectData } from "@/types/project";
 import { useI18n } from "@/lib/i18n/context";
 import SpotlightCard from "@/app/components/reactbits/SpotlightCard";
 import { ExternalLink } from "lucide-react";
+import ProjectVisualization from "./ProjectVisualization";
 
 interface FeaturedProjectProps {
   project: ProjectData;
 }
 
+// Per-project tab config. Keyed by project id so FeaturedProject stays generic.
+const PROJECT_TABS: Record<string, { label: string; src: string }[]> = {
+  meniva: [
+    { label: "Admin Panel", src: "/projects/meniva/admin-panel.png" },
+    { label: "QR Menu",     src: "/projects/meniva/qr-menu1.png"   },
+    { label: "Sync",        src: "/projects/meniva/qr-menu2.png"   },
+  ],
+};
+
 export default function FeaturedProject({ project }: FeaturedProjectProps) {
   const { t, locale } = useI18n();
+  const tabs = PROJECT_TABS[project.id] ?? [];
 
   return (
     <SpotlightCard className="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-colors duration-300">
@@ -83,39 +93,8 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
           </div>
         </div>
 
-        {/* Right Side: Image and Metrics */}
-        <div className="flex flex-col justify-between gap-6">
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
-            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 to-zinc-900 flex items-center justify-center p-4">
-              <span className="text-xs font-mono text-zinc-600">Case Study Visualization</span>
-            </div>
-            <Image
-              src={project.images.cover}
-              alt={project.title}
-              fill
-              priority
-              className="object-cover opacity-80 mix-blend-luminosity hover:opacity-100 hover:mix-blend-normal transition-all duration-300"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
-          </div>
-
-          {/* Metrics display */}
-          {project.metrics && project.metrics.length > 0 && (
-            <div className="grid grid-cols-3 gap-4">
-              {project.metrics.map((metric) => (
-                <div key={metric.label.en} className="p-4 bg-zinc-950/40 rounded-xl border border-zinc-900 text-center">
-                  <p className="text-xl font-extrabold text-emerald-400">{metric.value}</p>
-                  <p className="mt-1 text-[10px] uppercase font-mono tracking-wider text-zinc-500">
-                    {metric.label[locale]}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        {/* Right Side: Video + Tabs + Metrics */}
+        <ProjectVisualization project={project} tabs={tabs} />
       </div>
     </SpotlightCard>
   );

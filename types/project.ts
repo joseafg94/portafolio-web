@@ -36,6 +36,7 @@ export interface ProjectData {
 
   liveUrl?: string;
   loomUrl?: string;
+  demoVideo?: { webm?: string; mp4: string };
   testimonial?: {
     quote: LocaleString;
     author: string;
