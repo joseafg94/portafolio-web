@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n/context";
-import TextReveal from "@/app/components/reactbits/TextReveal";
+import AnimatedHeadline from "@/app/components/ui/AnimatedHeadline";
 import ShinyText from "@/app/components/reactbits/ShinyText";
 import Magnet from "@/app/components/reactbits/Magnet";
 
@@ -29,7 +29,7 @@ export default function Hero() {
 
       {/* Headline H1 with TextReveal effect */}
       <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] text-zinc-100">
-        <TextReveal text={t.hero.title} />
+        <AnimatedHeadline text={t.hero.title} />
       </h1>
 
       {/* Subheadline */}

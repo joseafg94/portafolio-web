@@ -2,6 +2,9 @@
 
 import { useI18n } from "@/lib/i18n/context";
 import type { NicheLandingData } from "@/types/niche-landing";
+import AnimatedHeadline from "@/app/components/ui/AnimatedHeadline";
+import ShinyText from "@/app/components/reactbits/ShinyText";
+import Magnet from "@/app/components/reactbits/Magnet";
 
 interface Props {
   data: NicheLandingData;
@@ -31,46 +34,51 @@ export default function NicheHero({ data }: Props) {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-28 text-center">
         {/* Niche badge */}
-        <div className="motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 mb-10">
+        <div className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/80 px-4 py-1.5 mb-10 backdrop-blur-sm">
           <span role="img" aria-label={nicheName[locale]}>
             {nicheEmoji}
           </span>
-          <span className="text-sm font-semibold text-emerald-400">
-            {t.nicheUi.forPrefix} {nicheName[locale]}
-          </span>
+          <ShinyText
+            text={`${t.nicheUi.forPrefix} ${nicheName[locale]}`}
+            speed={6}
+            className="text-xs font-semibold font-mono"
+          />
         </div>
 
         {/* Headline */}
-        <h1 className="motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom motion-safe:duration-700 motion-safe:delay-100 mb-6 text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-          <span className="bg-gradient-to-br from-zinc-100 via-emerald-200 to-zinc-300 bg-clip-text text-transparent">
-            {hero.headline[locale]}
-          </span>
+        <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] text-zinc-100">
+          <AnimatedHeadline
+            text={hero.headline[locale]}
+            className="bg-gradient-to-br from-zinc-100 via-emerald-200 to-zinc-300 bg-clip-text text-transparent"
+          />
         </h1>
 
         {/* Subheadline */}
-        <p className="motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom motion-safe:duration-700 motion-safe:delay-200 mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+        <p className="motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom motion-safe:duration-700 motion-safe:delay-200 mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl whitespace-pre-line">
           {hero.subheadline[locale]}
         </p>
 
         {/* CTAs */}
         <div className="motion-safe:animate-in motion-safe:fade-in motion-safe:duration-700 motion-safe:delay-300 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            id="niche-hero-cta-primary"
-            href={primaryCtaHref}
-            className="group inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-8 py-4 text-base font-bold text-zinc-950 shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 hover:shadow-emerald-500/35"
-          >
-            {hero.ctaPrimary[locale]}
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:translate-x-1"
+          <Magnet>
+            <a
+              id="niche-hero-cta-primary"
+              href={primaryCtaHref}
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-8 py-4 text-base font-bold text-zinc-950 shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 hover:shadow-emerald-500/35 cursor-pointer"
             >
-              →
-            </span>
-          </a>
+              {hero.ctaPrimary[locale]}
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+          </Magnet>
           <a
             id="niche-hero-cta-secondary"
             href="#offer"
-            className="inline-flex items-center justify-center rounded-xl border border-zinc-700 px-8 py-4 text-base font-semibold text-zinc-300 transition-all duration-200 hover:border-zinc-500 hover:text-zinc-100"
+            className="inline-flex items-center justify-center rounded-xl border border-zinc-700 px-8 py-4 text-base font-semibold text-zinc-300 transition-all duration-200 hover:border-zinc-500 hover:text-zinc-100 cursor-pointer"
           >
             {hero.ctaSecondary[locale]}
           </a>
