@@ -33,8 +33,8 @@ export default function Contact({ selectedService }: ContactProps) {
               </div>
               <div>
                 <p className="text-xs font-mono text-zinc-500 uppercase tracking-wider">{t.contact.emailLabel2}</p>
-                <a href="mailto:hello@kvasirlabs.com" className="text-sm font-semibold text-zinc-200 hover:text-emerald-400 transition-colors">
-                  hello@kvasirlabs.com
+                <a href="mailto:jafeth@kvasirlabs.com" className="text-sm font-semibold text-zinc-200 hover:text-emerald-400 transition-colors">
+                  jafeth@kvasirlabs.com
                 </a>
               </div>
             </div>

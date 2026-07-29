@@ -22,10 +22,10 @@ export default function Footer() {
           {/* Contact Email & Socials */}
           <div className="flex flex-col items-center md:items-end gap-2">
             <a
-              href="mailto:hello@kvasirlabs.com"
+              href="mailto:jafeth@kvasirlabs.com"
               className="text-sm text-zinc-300 hover:text-emerald-400 transition-colors"
             >
-              hello@kvasirlabs.com
+              jafeth@kvasirlabs.com
             </a>
             <div className="flex space-x-4 text-xs">
               <a href="#" className="hover:text-zinc-100 transition-colors">
