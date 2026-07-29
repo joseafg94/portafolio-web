@@ -134,6 +134,11 @@ export const en = {
     privacy: "We only use your info to reply to your inquiry. No spam, no third-party sharing.",
     rights: "All rights reserved.",
   },
+  nicheUi: {
+    forPrefix: "For",
+    sectionIncludes: "What's included",
+    sectionExcludes: "What's NOT included",
+  },
 };
 
 export type Dictionary = typeof en;

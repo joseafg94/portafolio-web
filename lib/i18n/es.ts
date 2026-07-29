@@ -136,4 +136,9 @@ export const es: Dictionary = {
     privacy: "Solo usamos tu información para responder tu solicitud. Sin spam, sin compartir con terceros.",
     rights: "Todos los derechos reservados.",
   },
+  nicheUi: {
+    forPrefix: "Para",
+    sectionIncludes: "Qué incluye",
+    sectionExcludes: "Qué NO incluye",
+  },
 };
