@@ -46,10 +46,9 @@ export default function NicheHero({ data }: Props) {
         </div>
 
         {/* Headline */}
-        <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] text-zinc-100">
+        <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1]">
           <AnimatedHeadline
             text={hero.headline[locale]}
-            className="bg-gradient-to-br from-zinc-100 via-emerald-200 to-zinc-300 bg-clip-text text-transparent"
           />
         </h1>
 
