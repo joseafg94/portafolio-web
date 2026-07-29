@@ -48,6 +48,8 @@ export default function FinalCta({ data }: Props) {
             <a
               id="niche-final-cta-primary"
               href={primaryCtaHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl bg-emerald-400 px-10 py-4 text-base font-bold text-zinc-950 shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 cursor-pointer"
             >
               {finalCta.ctaPrimary[locale]}

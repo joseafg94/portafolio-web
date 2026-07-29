@@ -12,7 +12,7 @@ export const nicheLandings: NicheLandingData[] = [
     nicheName: { en: "Dental Practices", es: "Clínicas Dentales" },
     nicheEmoji: "🦷",
     contactEmail: "jafeth@kvasirlabs.com",
-    primaryCtaHref: "mailto:jafeth@kvasirlabs.com",
+    primaryCtaHref: "https://calendly.com/kvasirlabs/discovery-call",
     availabilityBadge: {
       en: "Only 3 founding partner spots left",
       es: "Solo 3 cupos de founding partner disponibles",
