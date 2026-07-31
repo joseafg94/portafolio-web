@@ -48,7 +48,7 @@ export default function Hero() {
 
         {/* Secondary CTA */}
         <a
-          href="https://calendly.com"
+          href="https://calendly.com/kvasirlabs/discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto text-center rounded-xl border border-zinc-800 bg-zinc-900/30 px-7 py-4 text-sm font-semibold text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors cursor-pointer"

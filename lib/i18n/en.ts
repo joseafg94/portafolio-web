@@ -1,10 +1,10 @@
 export const en = {
   hero: {
-    badge: "Currently taking 2 new projects this month",
-    title: "Full-stack engineering for US small businesses — without the agency price tag.",
+    badge: "⚡ Focused Engineering Studio • 2 Spots Available",
+    title: "Senior-grade engineering to scale your business.",
     subtitle:
-      "We're the team behind Meniva, a live multi-tenant SaaS platform. Now we build automation, dashboards, and MVPs for businesses like yours — delivered in weeks, not months.",
-    ctaPrimary: "View Packages",
+      "Skip agency markups and junior hand-offs. Partner directly with the engineering team behind Meniva (SaaS) to ship your custom dashboard, AI automation, or MVP in weeks, not months.",
+    ctaPrimary: "View Fixed-Price Packages ↓",
     ctaSecondary: "Book a 15-Min Call",
   },
   nav: {

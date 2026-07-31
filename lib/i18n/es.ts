@@ -2,12 +2,12 @@ import { Dictionary } from "./en";
 
 export const es: Dictionary = {
   hero: {
-    badge: "Actualmente aceptando 2 proyectos nuevos este mes",
-    title: "Ingeniería full-stack para pequeños negocios en EE. UU. — sin el precio de una agencia.",
+    badge: "⚡ Estudio de Ingeniería Enfocado • 2 Cupos Disponibles",
+    title: "Ingeniería de nivel senior para escalar tu negocio.",
     subtitle:
-      "Somos el equipo detrás de Meniva, una plataforma SaaS multiempresa en producción. Ahora creamos automatizaciones, dashboards y MVPs para negocios como el tuyo — entregados en semanas, no meses.",
-    ctaPrimary: "Ver Paquetes",
-    ctaSecondary: "Agendar llamada de 15 min",
+      "Sáltate el sobreprecio de agencias y los traspasos a desarrolladores junior. Trabaja directamente con el equipo de ingeniería detrás de Meniva (SaaS) para lanzar tu dashboard personalizado, automatización de IA o MVP en semanas, no meses.",
+    ctaPrimary: "Ver Paquetes a Precio Fijo ↓",
+    ctaSecondary: "Agendar Llamada de 15 Min",
   },
   nav: {
     work: "Trabajos",
