@@ -62,23 +62,23 @@ export default function NicheHero({ data }: Props) {
           <Magnet>
             <a
               id="niche-hero-cta-primary"
-              href={primaryCtaHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#offer"
               className="group inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-8 py-4 text-base font-bold text-zinc-950 shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 hover:shadow-emerald-500/35 cursor-pointer"
             >
               {hero.ctaPrimary[locale]}
               <span
                 aria-hidden="true"
-                className="transition-transform duration-200 group-hover:translate-x-1"
+                className="transition-transform duration-200 group-hover:translate-y-0.5"
               >
-                →
+                ↓
               </span>
             </a>
           </Magnet>
           <a
             id="niche-hero-cta-secondary"
-            href="#offer"
+            href={primaryCtaHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl border border-zinc-700 px-8 py-4 text-base font-semibold text-zinc-300 transition-all duration-200 hover:border-zinc-500 hover:text-zinc-100 cursor-pointer"
           >
             {hero.ctaSecondary[locale]}
