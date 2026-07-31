@@ -56,10 +56,13 @@ export default function TextReveal({ text, className = "" }: TextRevealProps) {
       animate="visible"
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em] pb-1">
-          <motion.span variants={wordVariants} className="inline-block">
-            {word}
-          </motion.span>
+        <span key={i} className="inline-block whitespace-normal">
+          <span className="inline-block overflow-hidden pb-1 align-bottom">
+            <motion.span variants={wordVariants} className="inline-block">
+              {word}
+            </motion.span>
+          </span>
+          {i < words.length - 1 ? " " : ""}
         </span>
       ))}
     </motion.span>

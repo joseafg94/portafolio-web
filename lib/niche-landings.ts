@@ -25,6 +25,16 @@ export const nicheLandings: NicheLandingData[] = [
       en: "We build the digital infrastructure that captures every new patient your team can't get to — 24/7, automatically. High-conversion site + AI receptionist + booking + review funnel. 5–7 day delivery.",
       es: "Construimos la infraestructura digital que captura cada paciente nuevo que tu equipo no puede atender — las 24 horas, de forma automática. Sitio de alta conversión + recepcionista IA + agendamiento + embudo de reseñas. Entrega en 5–7 días.",
     },
+    seo: {
+      ogTitle: {
+        en: "New Patient Capture System for Dental Practices | Kvasir Labs",
+        es: "Sistema de Captación de Pacientes para Clínicas Dentales | Kvasir Labs",
+      },
+      ogDescription: {
+        en: "The average dental practice misses 1 in 3 calls. We build the 24/7 system that captures every new patient your front desk can't get to.",
+        es: "La clínica dental promedio pierde 1 de cada 3 llamadas. Construimos el sistema 24/7 que captura cada paciente nuevo que tu recepcionista no alcanza a atender.",
+      },
+    },
 
     // ── 1. Hero ───────────────────────────────────────────────────────────────
     hero: {
@@ -73,6 +83,58 @@ export const nicheLandings: NicheLandingData[] = [
         en: "You don't have a marketing problem. You have a systems problem.",
         es: "No tienes un problema de marketing. Tienes un problema de sistemas.",
       },
+    },
+
+    // ── 2.5 Qualification Section ──────────────────────────────────────────────
+    qualificationSection: {
+      heading: {
+        en: "Is This You?",
+        es: "¿Eres Tú?",
+      },
+      forYouHeading: {
+        en: "This is for you if:",
+        es: "Esto es para ti si:",
+      },
+      forYouBullets: [
+        {
+          en: "You're a solo or small group practice (1–5 dentists)",
+          es: "Eres una clínica individual o grupo pequeño (1–5 dentistas)",
+        },
+        {
+          en: "You're losing patients to voicemail or slow response times",
+          es: "Estás perdiendo pacientes en el buzón de voz o por tiempos de respuesta lentos",
+        },
+        {
+          en: "You want a system, not another marketing retainer with vague reports",
+          es: "Quieres un sistema, no otro retainer de marketing con reportes vagos",
+        },
+        {
+          en: "You're comfortable being one of our first 3 dental case studies",
+          es: "Te sientes cómodo siendo uno de nuestros primeros 3 casos de estudio dentales",
+        },
+      ],
+      notForYouHeading: {
+        en: "This is NOT for you if:",
+        es: "Esto NO es para ti si:",
+      },
+      notForYouBullets: [
+        {
+          en: "You need a full practice management system replacement (Dentrix/Open Dental integration)",
+          es: "Necesitas reemplazar tu sistema de gestión clínica completo (integración Dentrix/Open Dental)",
+        },
+        {
+          en: "You want social media management or paid ads",
+          es: "Buscas gestión de redes sociales o anuncios pagados",
+        },
+        {
+          en: "You need HIPAA-compliant patient data storage",
+          es: "Necesitas almacenamiento de datos de pacientes con cumplimiento HIPAA",
+        },
+        {
+          en: "You're looking for the cheapest option regardless of quality",
+          es: "Buscas la opción más barata sin importar la calidad",
+        },
+      ],
     },
 
     // ── 3. Offer ──────────────────────────────────────────────────────────────
@@ -238,8 +300,8 @@ export const nicheLandings: NicheLandingData[] = [
         es: "La matemática es simple.",
       },
       copy: {
-        en: "One new patient captured = $4,500–$8,000 lifetime value.\nYour system costs $250/month.\n\nIf it brings in just one extra patient per month that would have otherwise gone to voicemail — it pays for itself 18x over.\n\nMost of our dental clients see their first captured lead within the first week of going live.",
-        es: "Un paciente nuevo capturado = $4,500–$8,000 en valor de vida.\nTu sistema cuesta $250 al mes.\n\nSi trae aunque sea un paciente extra al mes que de otra forma hubiera llegado al buzón de voz — se paga solo 18 veces.\n\nLa mayoría de nuestros clientes dentales ven su primer lead capturado en la primera semana de lanzamiento.",
+        en: "A single new patient is worth thousands over their lifetime with your practice.\nYour system costs $250/month.\n\nIf it brings in just one extra patient a month that would've otherwise gone to voicemail, it pays for itself many times over.\n\nThis system is built to capture your first missed-call lead within the first week of going live.",
+        es: "Un solo paciente nuevo vale miles a lo largo de su vida en tu clínica.\nTu sistema cuesta $250 al mes.\n\nSi trae aunque sea un paciente extra al mes que de otra forma hubiera llegado al buzón de voz, se paga solo muchas veces.\n\nEste sistema está diseñado para capturar tu primer lead de llamada perdida en la primera semana de lanzamiento.",
       },
       ctaText: {
         en: "Book a 15-Min Call to See If You Qualify",

@@ -9,69 +9,36 @@ interface Props {
 
 export default function IncludesExcludes({ data }: Props) {
   const { locale, t } = useI18n();
-  const { includes, excludes } = data;
+  const { includes } = data;
 
   return (
     <section className="border-y border-zinc-800/60 bg-zinc-900/30 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2">
-          {/* ── Includes ── */}
-          <div>
-            <h2 className="mb-8 flex items-center gap-2 text-xl font-bold text-zinc-100">
-              <span className="text-emerald-400" aria-hidden="true">
-                ✓
-              </span>
-              {t.nicheUi.sectionIncludes}
-            </h2>
-            <ul className="space-y-3" role="list">
-              {includes.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex gap-4 rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 transition-colors hover:border-emerald-500/20"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-xs font-bold text-emerald-400"
-                  >
-                    ✓
-                  </span>
-                  <div>
-                    <p className="mb-0.5 text-sm font-semibold text-zinc-100">
-                      {item.title[locale]}
-                    </p>
-                    <p className="text-xs leading-relaxed text-zinc-500">
-                      {item.description[locale]}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-black tracking-tight text-zinc-100 sm:text-4xl">
+            {t.nicheUi.sectionIncludes}
+          </h2>
+        </div>
 
-          {/* ── Excludes ── */}
-          <div>
-            <h2 className="mb-8 flex items-center gap-2 text-xl font-bold text-zinc-500">
-              <span className="text-zinc-600" aria-hidden="true">
-                ✕
-              </span>
-              {t.nicheUi.sectionExcludes}
-            </h2>
-            <ul className="space-y-3" role="list">
-              {excludes.map((item, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <span
-                    aria-hidden="true"
-                    className="flex-shrink-0 text-sm text-zinc-700"
-                  >
-                    ✕
-                  </span>
-                  <span className="text-sm text-zinc-600 line-through">
-                    {item[locale]}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {includes.map((item, i) => (
+            <div
+              key={i}
+              className="flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 transition-all duration-200 hover:border-emerald-500/30 hover:bg-zinc-900/90"
+            >
+              <div>
+                <div className="mb-3 flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/15 text-xs font-bold text-emerald-400">
+                  ✓
+                </div>
+                <h3 className="mb-2 text-base font-semibold text-zinc-100">
+                  {item.title[locale]}
+                </h3>
+                <p className="text-xs leading-relaxed text-zinc-400">
+                  {item.description[locale]}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

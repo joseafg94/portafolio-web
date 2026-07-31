@@ -1,4 +1,4 @@
-import type { LocaleString } from "./project";
+import type { LocaleString, ProjectMetric } from "./project";
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 export interface NicheHeroData {
@@ -6,6 +6,18 @@ export interface NicheHeroData {
   subheadline: LocaleString;
   ctaPrimary: LocaleString;
   ctaSecondary: LocaleString;
+}
+
+// ─── Case Study ───────────────────────────────────────────────────────────────
+export interface NicheCaseStudyData {
+  title: LocaleString;
+  description: LocaleString;
+  metrics: ProjectMetric[];
+  demoVideo?: {
+    mp4: string;
+    webm?: string;
+  };
+  badge: "demo" | "live-client";
 }
 
 // ─── Pain Section ─────────────────────────────────────────────────────────────
@@ -62,6 +74,15 @@ export interface FinalCtaData {
   ctaSecondary: LocaleString;
 }
 
+// ─── Qualification Section ───────────────────────────────────────────────────
+export interface QualificationSectionData {
+  heading: LocaleString;
+  forYouHeading: LocaleString;
+  forYouBullets: LocaleString[];
+  notForYouHeading: LocaleString;
+  notForYouBullets: LocaleString[];
+}
+
 // ─── Root Data Shape ──────────────────────────────────────────────────────────
 export interface NicheLandingData {
   /** Unique identifier and URL slug — e.g. "dental" → /dental */
@@ -77,10 +98,16 @@ export interface NicheLandingData {
   availabilityBadge: LocaleString;
   metaTitle: LocaleString;
   metaDescription: LocaleString;
+  seo?: {
+    ogTitle?: LocaleString;
+    ogDescription?: LocaleString;
+  };
 
   // ── Sections ─────────────────────────────────────────────────────────────
   hero: NicheHeroData;
+  caseStudy?: NicheCaseStudyData;
   painSection: PainSectionData;
+  qualificationSection?: QualificationSectionData;
   offer: NicheOfferData;
   includes: IncludeItem[];
   /** Each exclude is a short bilingual string — rendered with strikethrough */
