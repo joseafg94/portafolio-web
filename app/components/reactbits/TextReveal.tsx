@@ -20,7 +20,7 @@ export default function TextReveal({ text, className = "" }: TextRevealProps) {
     return <span className={className}>{text}</span>;
   }
 
-  const words = text.split(" ");
+  const words = text.split(" ").filter((w) => w.length > 0);
 
   const containerVariants = {
     hidden: {},
@@ -50,19 +50,16 @@ export default function TextReveal({ text, className = "" }: TextRevealProps) {
 
   return (
     <motion.span
-      className={`inline-block ${className}`}
+      className={`inline-flex flex-wrap items-center justify-center gap-x-[0.3em] gap-y-1 ${className}`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block whitespace-normal">
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
-            <motion.span variants={wordVariants} className="inline-block">
-              {word}
-            </motion.span>
-          </span>
-          {i < words.length - 1 ? " " : ""}
+        <span key={i} className="inline-block overflow-hidden pb-1 align-bottom">
+          <motion.span variants={wordVariants} className="inline-block">
+            {word}
+          </motion.span>
         </span>
       ))}
     </motion.span>

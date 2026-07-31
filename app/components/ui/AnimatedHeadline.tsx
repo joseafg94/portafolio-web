@@ -20,7 +20,7 @@ export default function AnimatedHeadline({ text, className = "" }: AnimatedHeadl
   const lines = text.split("\n").filter((l) => l.trim().length > 0);
 
   return (
-    <>
+    <span className="flex flex-col items-center justify-center gap-1 sm:gap-2">
       {lines.map((line, i) => {
         // Highlight the last line if there are multiple lines
         const isLast = i === lines.length - 1 && lines.length > 1;
@@ -29,12 +29,12 @@ export default function AnimatedHeadline({ text, className = "" }: AnimatedHeadl
           : className || "text-zinc-100";
 
         return (
-          <span key={i} className="block">
+          <span key={i} className="block w-full text-center">
             <TextReveal text={line} className={lineClass} />
           </span>
         );
       })}
-    </>
+    </span>
   );
 }
 
